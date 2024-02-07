@@ -1,1 +1,10 @@
-<p>header works!</p>
+<div class="app-navbar">
+  <h1 class="title">Parti Bremen</h1>
+  <nav>
+    <ul class="nav-menu">
+      <li *ngFor="let item of navItems" class="nav-item">
+        <a class="nav-link" [routerLink]="[item.route]">{{item.label}}</a>
+      </li>
+    </ul>
+  </nav>
+</div>

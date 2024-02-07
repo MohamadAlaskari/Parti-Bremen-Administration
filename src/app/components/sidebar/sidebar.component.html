@@ -1,0 +1,18 @@
+<nav class="sidebar" [ngClass]="{'open': isOpen}">
+  <div class="sidebar-inner">
+    <header class="sidebar-header">
+      <button type="button" class="sidebar-burger" (click)="toggleSidebar()">
+        <mat-icon>{{ isOpen ? 'close' : 'menu' }}</mat-icon>
+      </button>
+      <h2 class="sidebar-title">PartiBremen</h2>
+      <img src="path/to/logo.svg" alt="" class="sidebar-logo" />
+    </header>
+    <nav class="sidebar-menu">
+      <button *ngFor="let item of navItems" class="sidebar-button" (click)="navigateTo(item.route)">
+        <mat-icon>{{item.icon}}</mat-icon>
+
+        <p>{{ item.label }}</p>
+      </button>
+    </nav>
+  </div>
+</nav>
